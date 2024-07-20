@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script type='text/javascript' src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/2e97e334e3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img
+                        src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></a>
+            </div>
+
+            <div class="nav-profile">
+                <p>Nemo</p>
+                <div onclick="opencart()" class="nav-cart">
+                    <i class="fa-solid fa-cart-shopping"> <a href="index.html"></a></i>
+                    <div id="cartcount" class="nav-cartcount" style="display: none;">
+                        12
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body-container">
+        <div class="sidebar">
+            <input onkeyup="searchsomething(this)" id="txt_search" type="text" class="sidebar-search"
+                placeholder="Search...">
+            <a onclick="searchproduct('all')" class="sidebar-item">
+                All product
+            </a>
+            <a onclick="searchproduct('shoes')" class="sidebar-item">
+                Shoes
+            </a>
+            <a onclick="searchproduct('hat')" class="sidebar-item">
+                Hat
+            </a>
+            <a onclick="searchproduct('shirt')" class="sidebar-item">
+                Shirt
+            </a>
+        </div>
+
+        <div id="productlist" class="product"></div>
+
+
+
+    </div>
+
+    <div id="modalDesc" class="modal" style="display:none;">
+        <div onclick="Closemodal()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>Detail</h2>
+            <div class="modal-content">
+                <img id="mdd-img"
+                    src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <div class="modal-description">
+                    <h2 id="mdd-name">Product name</h2>
+                    <h3 id="mdd-price">2100 THB</h3>
+                    <p id="mdd-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quibusdam, non
+                        dolores eveniet
+                        excepturi
+                        beatae veritatis necessitatibus dicta, iste nobis quos aut voluptatum similique reiciendis.
+                        Minus,
+                        nemo
+                        omnis. Blanditiis, perferendis?</p>
+                    <div class="btn-control">
+                        <button onclick="Closemodal()" class="btn">
+                            Close
+                        </button>
+                        <button onclick="addtocart()" class="btn btn-buy">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalcart" class="modal" style="display:none;">
+        <div onclick="Closemodal()" class=" modal-bg"></div>
+        <div class="modal-page">
+            <h2>My cart</h2>
+            <br>
+            <div id="mycart">
+            </div>
+            <div class="btn-control">
+                <button onclick="Closemodal()" class="btn">
+                    Cancle
+                </button>
+                <button onclick="buynow()" class="btn btn-buy">
+                    Buy
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

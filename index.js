@@ -29,6 +29,8 @@
     type: 'shirt'
 }];*/
 
+const port = process.env.PORT || 4000;
+
 var product;
 
 $(document).ready(() => {
